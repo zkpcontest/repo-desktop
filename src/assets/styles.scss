@@ -1,0 +1,59 @@
+$font-size-base:                   0.875rem !default;
+$font-size-lg:                     $font-size-base * 1.25;
+$font-size-sm:                     $font-size-base * .875;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~react-toastify/dist/ReactToastify.min.css";
+@import "~react-datetime/css/react-datetime.css";
+
+
+.sidebar {
+    min-width: 200px;
+
+    #brand {
+        height: 60px;
+        box-shadow: 0 10px 10px -10px rgb(0 0 0 / 8%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav {
+        a {
+            color: $secondary;
+            cursor: pointer;
+            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+        }
+        a:hover, a.active {
+            color: $white;
+            background-color: $gray-600;
+        }
+    }
+}
+
+.content {
+    height: 100vh;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+
+.select2.is-invalid .select2__control {
+    border-color: $danger;
+}
+.select2.is-valid .select2__control {
+    border-color: $success;
+}
+.select2 .select2__control {
+    min-height: auto !important;
+}
+.select2 .select2__indicator {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.select2 .select2__menu {
+    z-index: 1000;
+}
